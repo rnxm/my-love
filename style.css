@@ -1,0 +1,67 @@
+html,
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #0e0e0e;
+}
+
+.shake {
+    animation: shakeRotate 0.5s ease-in-out infinite;
+}
+
+.fade {
+    animation: fade 0.5s ease-in-out forwards, increase 0.5s ease-in-out forwards;
+}
+
+.fade-reverse {
+    animation: fade 0.5s ease-in-out reverse;
+}
+
+@keyframes shakeRotate {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(5deg); }
+    40% { transform: rotate(-5deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes increase {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.5); }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background: radial-gradient(wheat, #aa7b45, #331d0e);
+    padding: 10%;
+    -webkit-mask-image: url('burnt.png');
+    mask-image: url('burnt.png');
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
+
+.title {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 0;
+    margin-top: 0;
+    align-self: center;
+}
+
+.text {
+    font-family: "Domine", serif;
+    margin-bottom: 0;
+}
